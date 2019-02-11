@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>All Employees</h2>
+{% for employee in all_employees %}
+    <p>{{employee.name}}</p>
+{% endfor %}
+
+{% endblock %}
