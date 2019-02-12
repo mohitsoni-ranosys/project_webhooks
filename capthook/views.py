@@ -87,7 +87,8 @@ def handle_webhook(event, payload):
 @csrf_exempt
 def handle_github_hook(request):
     # Check the X-Hub-Signature header to make sure this is a valid request.
-    github_signature = request.META['HTTP_X_HUB_SIGNATURE']
+    # github_signature = request.META['HTTP_X_HUB_SIGNATURE']
+    github_signature = request.META.get('HTTP_X_HUB_SIGNATURE')
     signature = hmac.new(settings.GITHUB_WEBHOOK_SECRET, request.body, hashlib.sha1)
     expected_signature = 'sha1=' + signature.hexdigest()
     if not hmac.compare_digest(github_signature, expected_signature):

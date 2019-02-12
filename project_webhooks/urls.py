@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from capthook.views import handle_github_hook
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('capthook/', include('capthook.urls')),
+    path('hooks/handle_github/', handle_github_hook),
 ]

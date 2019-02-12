@@ -25,7 +25,7 @@ SECRET_KEY = 'lg83m1rsv0h($+r*_(p98077f^sq$3k%cpp-zzqm@i@tf8p4!)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['260851fb.ngrok.io']
 
 
 # Application definition
@@ -127,4 +127,4 @@ HOOK_EVENTS = {
     'emp.created': None,
 }
 
-GITHUB_WEBHOOK_SECRET = 'C92543327415B166B16E8FFA2397E'
+GITHUB_WEBHOOK_SECRET = b'C92543327415B166B16E8FFA2397E'
