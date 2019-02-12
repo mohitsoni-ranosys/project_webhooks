@@ -126,3 +126,5 @@ HOOK_EVENTS = {
     'employee.updated': 'capthook.models.updated+',
     'emp.created': None,
 }
+
+GITHUB_WEBHOOK_SECRET = 'C92543327415B166B16E8FFA2397E'
